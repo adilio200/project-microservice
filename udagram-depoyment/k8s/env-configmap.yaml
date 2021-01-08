@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: ConfigMap
+data:
+  AWS_BUCKET: course4-956071152868-dev
+  AWS_PROFILE: default
+  AWS_REGION: us-east-2
+  JWT_SECRET: helloworld
+  POSTGRES_DB: udagrambddev
+  POSTGRES_HOST: udagrambddev.cwt0nh6apa31.us-east-2.rds.amazonaws.com
+  URL: http://localhost:8100
+metadata:
+  name: env-config

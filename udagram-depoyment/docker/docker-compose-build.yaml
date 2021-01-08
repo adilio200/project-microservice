@@ -1,0 +1,18 @@
+version: "3"
+services:
+  reverseproxy:
+    build:
+      context: .
+    image: adilio200/reverseproxy
+  backend_user:
+    build:
+      context: ../../udagram-api-user
+    image: adilio200/udagram-api-user
+  udagram_feed:
+    build:
+      context: ../../udagram-api-feed
+    image: adilio200/udagram-api-feed
+  frontend:
+    build:
+      context: ../../udagram-frontend
+    image: adilio200/udagram-frontend:local
