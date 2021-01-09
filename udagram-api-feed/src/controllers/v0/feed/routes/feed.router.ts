@@ -34,6 +34,7 @@ router.get('/', async (req: Request, res: Response) => {
       item.url = AWS.getGetSignedUrl(item.url);
     }
   });
+  console.log(new Date().toLocaleString() + ': API call for request of all feeds');
   res.send(items);
 });
 
@@ -42,6 +43,7 @@ router.get('/:id',
     async (req: Request, res: Response) => {
       const {id} = req.params;
       const item = await FeedItem.findByPk(id);
+      console.log(new Date().toLocaleString() + ': API call for request of feeds by id '+id);
       res.send(item);
     });
 
